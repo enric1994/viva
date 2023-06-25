@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Enric Moreu viva presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title -->
+            <section>
+                <h3>Exploring Synthetic Image Generation for Training Computer Vision Models under Data Scarcity</h3>
+                <br>
+                <h4>Enric Moreu, B.E., M.E.</h4>
+                <br>
+                <h5>Supervised by Prof. Noel E. O’Connor and Co-supervised by Dr. Kevin McGuinness</h5>
+                <br>
+                <h5>August 2023</h5>
+            </section>
+
+            <!-- Introduction -->
+            <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                <h2>Render</h2>
+                <div class="r-hstack justify-center">
+                    <div data-id="box1" style="background: #999; width: 400px; height: 50px; margin: 10px; padding: 10px; border-radius: 10px;">3D model</div>
+                    <div data-id="box2" style="background: #999; width: 400px; height: 50px; margin: 10px; padding: 10px; border-radius: 10px;">Background</div>
+                    <div data-id="box3" style="background: #999; width: 400px; height: 50px; margin: 10px; padding: 10px; border-radius: 10px;">Lighting</div>
+                </div>
+            </section>
+            <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                <div data-id="box3" data-auto-animate-delay="0.2" style="background: yellow; width: 100px; height: 100px; margin: 10px; border-radius: 200px;"></div>
+                <div class="r-hstack justify-center">
+                    <div data-id="box2" data-auto-animate-delay="0.1" style="background: cyan; width: 600px; height: 400px; margin: 10px;">
+                    <div data-id="box1" data-auto-animate-delay="0.2" style="background: magenta; width: 150px; height: 100px; margin: 200px; border-radius: 10px"></div>
+                </div>
+                </div>
+                <h2 style="margin-top: 20px;">Render</h2>
+            </section>
+       
+            <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                <div class="r-stack">
+                    <div data-id="box1" style="background: cyan; width: 300px; height: 300px; border-radius: 200px;"></div>
+                    <div data-id="box2" style="background: magenta; width: 200px; height: 200px; border-radius: 200px;"></div>
+                    <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div>
+                </div>
+                <h2 style="margin-top: 20px;">Auto-Animate</h2>
+            </section>
+
+
+            <!-- Research questions -->
+            <section>
+                <section data-auto-animate>
+                    <ol>
+                        <li><strong>Render</strong> synthetic data</li>
+                        <li><strong>Train</strong> a computer vision model</li>
+                        <li><strong>Evaluate</strong> on real world data</li>
+                    </ol>
+
+                </section>
+
+                <section data-auto-animate>
+                    <ol>
+                        <li><strong>Render</strong> synthetic data
+                            <ul><strong>RQ1: </strong>How realistic should it be?</ul>
+                        </li>
+                        <li><strong>Train</strong> a computer vision model</li>
+                        <li><strong>Evaluate</strong> on real world data</li>
+                    </ol>
+
+                </section>
+
+                <section data-auto-animate>
+                    <ol>
+                        <li><strong>Render</strong> synthetic data
+                            <ul><strong>RQ1: </strong>How realistic should it be?</ul>
+                        </li>
+                        <li><strong>Train</strong> a computer vision model
+                            <ul><strong>RQ2: </strong>Can we improve the domain adaptation by using labels?</ul>
+                        </li>
+                        <li><strong>Evaluate</strong> on real world data</li>
+                    </ol>
+
+                </section>
+
+                <section data-auto-animate>
+                    <ol>
+                        <li><strong>Render</strong> synthetic data
+                            <ul><strong>RQ1: </strong>How realistic should it be?</ul>
+                        </li>
+                        <li><strong>Train</strong> a computer vision model
+                            <ul><strong>RQ2: </strong>Can we improve the domain adaptation by using labels?</ul>
+                        </li>
+                        <li><strong>Evaluate</strong> on real world data
+                            <ul><strong>RQ3: </strong>How can we expose the model to real world data?</ul>
+                        </li>
+                    </ol>
+
+                </section>
+            </section>
+
+            <!-- Domain randomization  -->
+            <section>
+                <section>
+                    GTA V character with many vertices vs lowpoly
+                </section>
+
+                <section>
+                    <h2>Domain Randomization</h2>
+                </section>
+
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <div class="r-hstack justify-center">
+                        <div data-id="s-domain" style="background: cyan; width: 200px; height: 200px; border-radius: 200px; padding: 20px;">Synthetic domain</div>
+                        <div style="margin: 100px;">-></div>
+                        <div data-id="r-domain" style="background: magenta; width: 200px; height: 200px; border-radius: 200px; padding: 20px;">Real domain</div>
+                    </div>
+                <h3>The model extrapolates between domains</h3>
+                </section>
+
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <div class="r-hstack justify-center">
+                        <div data-id="s-domain" style="background: cyan; width: 400px; height: 400px; border-radius: 200px; padding: 20px;">Synthetic domain
+                            <div data-id="r-domain" style="background: magenta; width: 200px; height: 200px; border-radius: 200px; padding: 20px;">Real domain</div>
+                        </div>
+                    </div>
+                <h3>The model interpolates between domains</h3>
+                </section>
+            </section>
+
+            <!-- transition to DA  -->
+            <section>
+                <section>However, DR doesn't always work</section>
+            </section>
+
+            <!-- Domain adaptation 1 -->
+            <section>
+                <section>Domain adaptation RQ2</section>
+            </section>
+
+            <!-- Domain adaptation 2  -->
+            <section>
+                <section>Domain adaptation RQ3</section>
+            </section>
+
+            <!-- Conclusions  -->
+            <section>
+                <section>Conclusions</section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            controlsTutorial: false,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
