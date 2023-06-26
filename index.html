@@ -32,17 +32,18 @@
             <!-- Research questions -->
             <section data-auto-animate>
                 <div style="text-align: left;">
-                    <h3><strong>1. Generate </strong>syntethic data</h3>
-                    <p class="fragment" style="margin-bottom: 100px;" data-fragment-index="4">RQ1: How realistic should
-                        it be?</p>
+                    <h3><strong>1. Generate </strong>synthetic data</h3>
+                    <p class="fragment" style="margin-bottom: 50px;" data-fragment-index="4">RQ1: How realistic should
+                        the synthetic data be?</p>
                     <h3 class="fragment" data-fragment-index="2"><strong>2. Train </strong> a computer vision model</h3>
-                    <p class="fragment" style="margin-bottom: 100px;" data-fragment-index="5">RQ2: Can we make it more
-                        realistic by using labels?</p>
+                    <p class="fragment" style="margin-bottom: 50px;" data-fragment-index="5">RQ2: Can labels improve
+                        the model's realism?</p>
                     <h3 class="fragment" data-fragment-index="3"><strong>3. Evaluate </strong>on real world data</h3>
-                    <p class="fragment" style="margin-bottom: 100px;" data-fragment-index="6">RQ3: How can we expose the
-                        model to real world data? </p>
+                    <p class="fragment" style="margin-bottom: 50px;" data-fragment-index="6">RQ3: How can the model learn from real-world data? </p>
                 </div>
             </section>
+
+            <!-- Blur everything but RQ1? -->
 
 
             <!-- Domain randomization  -->
@@ -65,7 +66,7 @@
                         <img src="https://placekitten.com/450/300" width="450" height="300">
                         <img src="https://placekitten.com/300/450" width="300" height="450">
                         <img src="https://placekitten.com/400/400" width="400" height="400">
-                      </div>
+                    </div>
                     <h2 data-id="domain-randomization">Domain Randomization</h2>
                 </section>
 
@@ -75,7 +76,8 @@
                         <div data-id="box1"
                             style="border:solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px; justify-content: center;">
                             <div style="margin-top: 45%;">Synthetic
-                            </div></div>
+                            </div>
+                        </div>
                         <div><span style="font-size: 50px;">&#10230;</span>
                         </div>
                         <div data-id="box2"
@@ -85,33 +87,103 @@
                         </div>
                     </div>
                 </section>
-              
+
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <div class="r-stack">
                         <div data-id="box1" style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
                         </div>
                         <div data-id="box2" style="border: solid; width: 200px; height: 200px; border-radius: 400px;">
                         </div>
-                        <!-- <div data-id="box3" style="background: yellow; width: 100px; height: 100px; border-radius: 200px;"></div> -->
                     </div>
-                    <p style="margin-top: 20px;">Domain randomization makes the model <strong>interpolate</strong> to the target domain</p>
+                    <p style="margin-top: 20px;">Domain randomization makes the model <strong>interpolate</strong> to
+                        the target domain</p>
                 </section>
+
+                <section data-auto-animate>
+                    <img src="https://placekitten.com/450/300" width="450" height="300">
+                </section>
+
+                <section data-auto-animate>
+                    <img src="https://placekitten.com/450/300" width="450" height="300">
+                    <img src="https://placekitten.com/450/300" width="500" height="700">
+                </section>
+
+                <section data-auto-animate>
+                    <img src="https://placekitten.com/450/300" width="450" height="300">
+                    <img src="https://placekitten.com/450/300" width="450" height="300">
+                    <pre><code class="python3" data-trim>
+                        import random
+                        from sklearn.datasets import make_blobs
+
+                        light_intensity = random.uniform(0.1, 2)
+                        X, _ = make_blobs(n_samples=100, centers=10, n_features=2)
+                          </code></pre>
+                </section>
+
+                <section>Nice demo image</section>
 
             </section>
 
             <!-- transition to DA  -->
             <section>
-                <section>However, DR doesn't always work</section>
+                <section>Images from medical domain (no variability)</section>
             </section>
 
             <!-- Domain adaptation 1 -->
             <section>
-                <section>Domain adaptation RQ2</section>
+                <section>
+                    <h2>Domain adaptation</h2>
+                    <div class="fragment">
+                        <div>&#9744;polyp 1</div>
+                        <div>&#9744;polyp2</div>
+                    </div>
+                </section>
+
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <div class="r-hstack justify-center">
+                        <div data-id="box1"
+                            style="border:solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px; justify-content: center;">
+                            <div style="margin-top: 45%;">Synthetic
+                            </div>
+                        </div>
+                        <div><span style="font-size: 50px;">&#10230;</span>
+                        </div>
+                        <div data-id="box2"
+                            style="border: solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px;">
+                            <div style="margin-top: 45%;">Real
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                    <div class="r-stack">
+                        <div data-id="box1" style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
+                        </div>
+                        <div data-id="box2" style="border: solid; width: 200px; height: 200px; border-radius: 400px;">
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">Domain adaptation brings the domains closer</p>
+                </section>
+
+                <section>Images of polyp segmentation</section>
+
+                <section>Synth-colon video + title</section>
+
+                <section>Synth-colon stats + images</section>
+
+                <section>Diagram with Cyclegan (details about CGAN, will use zoom)(RQ2!)</section>
+                <section>Diagram with CUT (will use zoom)</section>
+                <section>Iframe CUT github + code loss (steps)</section>
+                <section>Loss formula latex (previous slide?)</section>
+
             </section>
+
+            <section>Connection to RQ3, graph CUT performance (2 fragments)</section>
 
             <!-- Domain adaptation 2  -->
             <section>
-                <section>Domain adaptation RQ3</section>
+                <section>Pseudo-labels + publications</section>
             </section>
 
             <!-- Conclusions  -->
@@ -133,6 +205,7 @@
             hash: true,
             controlsTutorial: false,
             progress: false,
+            slideNumber: 'c',
 
             // Learn about plugins: https://revealjs.com/plugins/
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
