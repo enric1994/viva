@@ -29,20 +29,35 @@
                 <h5>August 2023</h5>
             </section>
 
-            <!-- Research questions -->
+            <!-- Index -->
+            <section>
+                <h3>Index</h3>
+                <ol>
+                    <li>Introduction</li>
+                    <li>Domain Randomization</li>
+                    <li>Domain Adaptation</li>
+                    <li>Pseudo-labels</li>
+                    <li>Conclusions</li>
+                </ol>
+            </section>
+
+            <!-- 3D-based synthetic data -->
+
+            <!-- Methodology -->
             <section data-auto-animate>
+                <h2>Methodology</h2>
                 <div style="text-align: left;">
-                    <h3><strong>1. Generate </strong>synthetic data</h3>
+                    <h4 class="fragment" data-fragment-index="1"><strong>1. Generate </strong>synthetic images</h4>
                     <p class="fragment" data-fragment-index="4">RQ1: How realistic should
                         the synthetic data be?</p>
                     <br>
-                    <h3 class="fragment" data-fragment-index="2"><strong>2. Train </strong> a computer vision model</h3>
+                    <h4 class="fragment" data-fragment-index="2"><strong>2. Train </strong> a computer vision model</h4>
                     <p class="fragment" data-fragment-index="5">RQ2: Can labels improve the
                         realism of images?</p>
                     <br>
-                    <h3 class="fragment" data-fragment-index="3"><strong>3. Evaluate </strong>on real world data</h3>
+                    <h4 class="fragment" data-fragment-index="3"><strong>3. Evaluate </strong>on real images</h4>
                     <p class="fragment" data-fragment-index="6">RQ3: How can the model
-                        learn from real-world data? </p>
+                        learn from real data? </p>
                 </div>
             </section>
 
@@ -50,12 +65,31 @@
 
 
             <!-- Domain randomization  -->
-            <section>
-                <section>
+            <section data-auto-animate>
+                <section data-auto-animate>
+                    <p>RQ1: How realistic should
+                        the synthetic data be?</p>
                     <div class="r-hstack justify-center">
-                        iframes (add fragments with poly count)
-                        <!-- <iframe title="Bean Bot" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="480" height="640" src="https://sketchfab.com/models/9b1c86da128147e59bdbb9092ad40d2e/embed?autostart=1&camera=0"> </iframe>  -->
-                        <!-- <iframe title="Bean Bot" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="480" height="640" src="https://sketchfab.com/models/9b1c86da128147e59bdbb9092ad40d2e/embed?autostart=1&camera=0"> </iframe>  -->
+
+                    </div>
+                </section>
+
+                <section data-auto-animate>
+                    <p>RQ1: How realistic should
+                        the synthetic data be?</p>
+                    <div class="r-hstack justify-center">
+                        <div>
+                            <iframe height="420" width="620" frameborder="0"
+                                src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fsublimeguile%2fmodel_army%2fmaster%2fwill%20clean.stl"
+                                title="will clean.stl"></iframe>
+                            85,000 faces
+                        </div>
+                        <div>
+                            <script
+                                src="https://embed.github.com/view/3d/enric1994/embed-3d/master/lowpoly.stl"></script>
+                            102 faces
+                        </div>
+
                     </div>
                 </section>
 
@@ -73,18 +107,18 @@
                 </section>
 
                 <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-                    <p>By default, the model learns to <strong>extrapolate</strong> between domains</p>
+                    <p>By default, computer vision models learn to <strong>extrapolate</strong> between domains</p>
                     <div class="r-hstack justify-center">
                         <div data-id="box1"
-                            style="border:solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px; justify-content: center;">
-                            <div style="margin-top: 45%;">Synthetic
+                            style="border:solid; width: 200px; height: 200px; margin: 10px; border-radius: 400px; justify-content: center;">
+                            <div style="margin-top: 35%;">Synthetic
                             </div>
                         </div>
                         <div><span style="font-size: 50px;">&#10230;</span>
                         </div>
                         <div data-id="box2"
-                            style="border: solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px;">
-                            <div style="margin-top: 45%;">Real
+                            style="border: solid; width: 200px; height: 200px; margin: 10px; border-radius: 400px;">
+                            <div style="margin-top: 35%;">Real
                             </div>
                         </div>
                     </div>
@@ -179,7 +213,8 @@
                             style="border: solid; width: 500px; height: 500px; border-radius: 400px; margin-left: -150px;">
                         </div>
                     </div>
-                    <p style="margin-top: 20px;">Domain adaptation <strong>reduces the dissimilarity</strong> between domains</p>
+                    <p style="margin-top: 20px;">Domain adaptation <strong>reduces the dissimilarity</strong> between
+                        domains</p>
                 </section>
 
                 <section>
