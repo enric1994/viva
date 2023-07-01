@@ -120,7 +120,7 @@
                         </div>
                         <div>
                             <script
-                                src="https://embed.github.com/view/3d/enric1994/embed-3d/master/lowpoly.stl"></script>
+                                src="https://embed.github.com/view/3d/enric1994/viva/master/models/lowpoly.stl"></script>
                             102 faces
                         </div>
 
@@ -162,27 +162,32 @@
                         the target domain</p>
                 </section>
 
+            </section>
+            <section>
+                <section><img src="images/people3.png" height="600"></section>
                 <section data-auto-animate>
+                    <h2>Randomizing a synthetic dataset</h2>
                     <div class="r-hstack">
 
-                        <img src="images/dummy.png" width="450" height="300">
+                        <img src="images/people2.png" width="450" height="300">
                     </div>
                 </section>
 
                 <section data-auto-animate>
+                    <h2>Randomizing a synthetic dataset</h2>
                     <div class="r-hstack">
-                        <img src="images/dummy.png" width="450" height="300">
-                        <img src="images/dummy.png" width="550" height="350">
+                        <img src="images/people2.png" width="450" height="300">
+                        <img src="images/dtd.png" width="450" height="300">
                     </div>
                 </section>
 
-                <!-- TODO: add code steps -->
+
                 <section data-auto-animate>
                     <div class="r-hstack">
-                        <img src="images/dummy.png" width="450" height="300">
-                        <img src="images/dummy.png" width="550" height="350">
+                        <img src="images/people2.png" width="450" height="300">
+                        <img src="images/dtd.png" width="550" height="350">
                     </div>
-                    <pre><code class="python3" data-trim>
+                    <pre><code class="python3" data-trim data-line-numbers="|1,4|2,5">
                         import random
                         from sklearn.datasets import make_blobs
 
@@ -191,7 +196,7 @@
                           </code></pre>
                 </section>
 
-                <section><img src="images/dummy.png" width="800" height="600"></section>
+                
 
             </section>
 
@@ -201,7 +206,8 @@
                     <h4>
                         Domain Randomization doesn't work for domains with low variance
                     </h4>
-                    <div class="fragment"><img src="images/dummy.png" width="500" height="300"></div>
+                    <!-- https://www.ucd-ml-mi.com/ -->
+                    <div class="fragment"><img src="images/medical-images.png" height="500"></div>
                 </section>
             </section>
 
@@ -210,10 +216,10 @@
                 <section>
                     <h2>Domain adaptation</h2>
                     <div class="fragment">
-                        <div>&#9744;Synthetic data for unsupervised polyp segmentation (2021)</div>
-                        <div>&#9744;Joint one-sided synthetic unpaired image translation and segmentation for
+                        <p>&#9744;Synthetic data for unsupervised polyp segmentation (2021)</p>
+                        <p>&#9744;Joint one-sided synthetic unpaired image translation and segmentation for
                             colorectal
-                            cancer prevention (2022)</div>
+                            cancer prevention (2022)</p>
                     </div>
                 </section>
 
@@ -249,11 +255,12 @@
 
                 <section>
                     <h3>Polyp segmentation</h3>
-                    <img src="images/dummy.png" width="500" height="300">
+                    <img src="images/polyp1.png" height="500">
                 </section>
 
                 <section data-auto-animate
-                    data-background-iframe="https://enric1994.github.io/viva/images/video-colon.mp4">
+                    data-background-iframe="https://enric1994.github.io/viva/images/video-colon.mp4"
+                    data-background-size="cover">
                     <h2
                         style="color: black; -webkit-text-fill-color: white; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: black;">
                         Synth-colon dataset</h2>
@@ -267,6 +274,24 @@
                         <li>Depth maps</li>
                         <li>3D objects</li>
                     </ul>
+                </section>
+
+                <section data-auto-animate>
+                    <h2>Synth-colon dataset</h2>
+                    <div class="r-hstack">
+                        <div>
+
+                            <img src="images/synth-colon.png" height="300">
+                        </div>
+                        <div>
+
+                            <img src="images/depth.png" height="300">
+                        </div>
+                        <div>
+                            <script
+                                src="https://embed.github.com/view/3d/enric1994/viva/master/models/synth-colon.stl"></script>
+                        </div>
+                    </div>
                 </section>
 
                 <section>Diagram with Cyclegan (details about CGAN, will use zoom)(RQ2!)</section>
