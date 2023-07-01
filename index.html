@@ -33,7 +33,8 @@
             <section>
                 <h3>Index</h3>
                 <ol>
-                    <li>Introduction</li>
+                    <li>3D-based synthetic data</li>
+                    <li>Methodology</li>
                     <li>Domain Randomization</li>
                     <li>Domain Adaptation</li>
                     <li>Pseudo-labels</li>
@@ -41,252 +42,308 @@
                 </ol>
             </section>
 
+
             <!-- 3D-based synthetic data -->
-
-            <!-- Methodology -->
-            <section data-auto-animate>
-                <h2>Methodology</h2>
-                <div style="text-align: left;">
-                    <h4 class="fragment" data-fragment-index="1"><strong>1. Generate </strong>synthetic images</h4>
-                    <p class="fragment" data-fragment-index="4">RQ1: How realistic should
-                        the synthetic data be?</p>
-                    <br>
-                    <h4 class="fragment" data-fragment-index="2"><strong>2. Train </strong> a computer vision model</h4>
-                    <p class="fragment" data-fragment-index="5">RQ2: Can labels improve the
-                        realism of images?</p>
-                    <br>
-                    <h4 class="fragment" data-fragment-index="3"><strong>3. Evaluate </strong>on real images</h4>
-                    <p class="fragment" data-fragment-index="6">RQ3: How can the model
-                        learn from real data? </p>
-                </div>
-            </section>
-
-            <!-- Blur everything but RQ1? -->
-
-
-            <!-- Domain randomization  -->
-            <section data-auto-animate>
+            <section>
+                    <section data-background-iframe="https://enric1994.github.io/viva/images/blendercam.mp4">
+						<div>
+							<h2 style="color: black; -webkit-text-fill-color: white; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: black;">3D-based Syhtetic Data</h2>
+						</div>
+					</section>
                 <section data-auto-animate>
-                    <p>RQ1: How realistic should
-                        the synthetic data be?</p>
-                    <div class="r-hstack justify-center">
-
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <p>RQ1: How realistic should
-                        the synthetic data be?</p>
-                    <div class="r-hstack justify-center">
-                        <div>
-                            <iframe height="420" width="620" frameborder="0"
-                                src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fsublimeguile%2fmodel_army%2fmaster%2fwill%20clean.stl"
-                                title="will clean.stl"></iframe>
-                            85,000 faces
-                        </div>
-                        <div>
-                            <script
-                                src="https://embed.github.com/view/3d/enric1994/embed-3d/master/lowpoly.stl"></script>
-                            102 faces
-                        </div>
-
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <h2 data-id="domain-randomization">Domain Randomization</h2>
-                    <div class="fragment">&#9744;Domain Randomization for Object Counting (2021)</div>
-                </section>
-
-                <section data-auto-animate>
+                    <!-- animate from index? -->
+                    <h2>3D-based synthetic data</h2>
                     <div class="r-hstack">
-                        <img src="images/dummy.png" width="300" height="300">
-                        <img src="images/dummy.png" width="300" height="300">
-                        <img src="images/dummy.png" width="300" height="300">
+                        <div>
+
+                            <img src="images/3d_env.png" height="400">
+                            <p>3D environment</p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>3D-based synthetic data</h2>
+                    <div class="r-hstack">
+                        <div>
+                            <!-- Adjust width to avoid moving title -->
+                            <iframe title="Little Blue Penguin / Kororā" frameborder="0" allowfullscreen
+                                mozallowfullscreen="true" webkitallowfullscreen="true"
+                                allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                                execution-while-out-of-viewport execution-while-not-rendered web-share
+                                height="420"
+                                src="https://sketchfab.com/models/8a58020139cf43bc821bfdfa01e13208/embed?dnt=1">
+                            </iframe>
+                            <p>3D model</p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>3D-based synthetic data</h2>
+                    <div class="r-hstack">
+                        <div>
+                            <img src="images/background.png" height="400">
+                            <p>Background image</p>
+                        </div>
+                    </div>
+                </section>
+                <section data-auto-animate>
+                    <h2>3D-based synthetic data</h2>
+                    <img src="images/2.png" width="250" height="250">
+                    <p>Lighting and camera parameters</p>
+                </section>
+
+                <!-- Methodology -->
+                <section data-auto-animate>
+                    <h2>Methodology</h2>
+                    <div style="text-align: left;">
+                        <h4 class="fragment" data-fragment-index="1"><strong>1. Generate </strong>synthetic images</h4>
+                        <p class="fragment" data-fragment-index="4">RQ1: How realistic should
+                            the synthetic data be?</p>
+                        <br>
+                        <h4 class="fragment" data-fragment-index="2"><strong>2. Train </strong> a computer vision model
+                        </h4>
+                        <p class="fragment" data-fragment-index="5">RQ2: Can labels improve the
+                            realism of images?</p>
+                        <br>
+                        <h4 class="fragment" data-fragment-index="3"><strong>3. Evaluate </strong>on real images</h4>
+                        <p class="fragment" data-fragment-index="6">RQ3: How can the model
+                            learn from real data? </p>
                     </div>
                 </section>
 
-                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-                    <p>By default, computer vision models learn to <strong>extrapolate</strong> between domains</p>
-                    <div class="r-hstack justify-center">
-                        <div data-id="box1"
-                            style="border:solid; width: 200px; height: 200px; margin: 10px; border-radius: 400px; justify-content: center;">
-                            <div style="margin-top: 35%;">Synthetic
+                <!-- Blur everything but RQ1? -->
+
+
+                <!-- Domain randomization  -->
+                <section data-auto-animate>
+                    <section data-auto-animate>
+                        <p>RQ1: How realistic should
+                            the synthetic data be?</p>
+                        <div class="r-hstack justify-center">
+
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <p>RQ1: How realistic should
+                            the synthetic data be?</p>
+                        <div class="r-hstack justify-center">
+                            <div>
+                                <iframe height="420" width="620" frameborder="0"
+                                    src="https://viewscreen.githubusercontent.com/view/solid?url=https%3a%2f%2fraw.githubusercontent.com%2fsublimeguile%2fmodel_army%2fmaster%2fwill%20clean.stl"
+                                    title="will clean.stl"></iframe>
+                                85,000 faces
+                            </div>
+                            <div>
+                                <script
+                                    src="https://embed.github.com/view/3d/enric1994/embed-3d/master/lowpoly.stl"></script>
+                                102 faces
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2 data-id="domain-randomization">Domain Randomization</h2>
+                        <div class="fragment">&#9744;Domain Randomization for Object Counting (2021)</div>
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="r-hstack">
+                            <img src="images/dummy.png" width="300" height="300">
+                            <img src="images/dummy.png" width="300" height="300">
+                            <img src="images/dummy.png" width="300" height="300">
+                        </div>
+                    </section>
+
+                    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                        <p>By default, computer vision models learn to <strong>extrapolate</strong> between domains</p>
+                        <div class="r-hstack justify-center">
+                            <div data-id="box1"
+                                style="border:solid; width: 200px; height: 200px; margin: 10px; border-radius: 400px; justify-content: center;">
+                                <div style="margin-top: 35%;">Synthetic
+                                </div>
+                            </div>
+                            <div><span style="font-size: 50px;">&#10230;</span>
+                            </div>
+                            <div data-id="box2"
+                                style="border: solid; width: 200px; height: 200px; margin: 10px; border-radius: 400px;">
+                                <div style="margin-top: 35%;">Real
+                                </div>
                             </div>
                         </div>
-                        <div><span style="font-size: 50px;">&#10230;</span>
-                        </div>
-                        <div data-id="box2"
-                            style="border: solid; width: 200px; height: 200px; margin: 10px; border-radius: 400px;">
-                            <div style="margin-top: 35%;">Real
+                    </section>
+
+                    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                        <div class="r-stack">
+                            <div data-id="box1"
+                                style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
+                            </div>
+                            <div data-id="box2"
+                                style="border: solid; width: 200px; height: 200px; border-radius: 400px;">
                             </div>
                         </div>
-                    </div>
-                </section>
+                        <p style="margin-top: 20px;">Domain randomization makes the model <strong>interpolate</strong>
+                            to
+                            the target domain</p>
+                    </section>
 
-                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-                    <div class="r-stack">
-                        <div data-id="box1" style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
+                    <section data-auto-animate>
+                        <div class="r-hstack">
+
+                            <img src="images/dummy.png" width="450" height="300">
                         </div>
-                        <div data-id="box2" style="border: solid; width: 200px; height: 200px; border-radius: 400px;">
+                    </section>
+
+                    <section data-auto-animate>
+                        <div class="r-hstack">
+                            <img src="images/dummy.png" width="450" height="300">
+                            <img src="images/dummy.png" width="550" height="350">
                         </div>
-                    </div>
-                    <p style="margin-top: 20px;">Domain randomization makes the model <strong>interpolate</strong> to
-                        the target domain</p>
-                </section>
+                    </section>
 
-                <section data-auto-animate>
-                    <div class="r-hstack">
-
-                        <img src="images/dummy.png" width="450" height="300">
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <div class="r-hstack">
-                        <img src="images/dummy.png" width="450" height="300">
-                        <img src="images/dummy.png" width="550" height="350">
-                    </div>
-                </section>
-
-                <section data-auto-animate>
-                    <div class="r-hstack">
-                        <img src="images/dummy.png" width="450" height="300">
-                        <img src="images/dummy.png" width="550" height="350">
-                    </div>
-                    <pre><code class="python3" data-trim>
+                    <section data-auto-animate>
+                        <div class="r-hstack">
+                            <img src="images/dummy.png" width="450" height="300">
+                            <img src="images/dummy.png" width="550" height="350">
+                        </div>
+                        <pre><code class="python3" data-trim>
                         import random
                         from sklearn.datasets import make_blobs
 
                         light_intensity = random.uniform(0.1, 2)
                         X, _ = make_blobs(n_samples=100, centers=10, n_features=2)
                           </code></pre>
+                    </section>
+
+                    <section><img src="images/dummy.png" width="800" height="600"></section>
+
                 </section>
 
-                <section><img src="images/dummy.png" width="800" height="600"></section>
-
-            </section>
-
-            <!-- transition to DA  -->
-            <section>
+                <!-- transition to DA  -->
                 <section>
-                    <h4>
-                        Domain Randomization doesn't work for domains with low variance
-                    </h4>
-                    <div class="fragment"><img src="images/dummy.png" width="500" height="300"></div>
+                    <section>
+                        <h4>
+                            Domain Randomization doesn't work for domains with low variance
+                        </h4>
+                        <div class="fragment"><img src="images/dummy.png" width="500" height="300"></div>
+                    </section>
                 </section>
-            </section>
 
-            <!-- Domain adaptation -->
-            <section>
+                <!-- Domain adaptation -->
                 <section>
-                    <h2>Domain adaptation</h2>
-                    <div class="fragment">
-                        <div>&#9744;Synthetic data for unsupervised polyp segmentation (2021)</div>
-                        <div>&#9744;Joint one-sided synthetic unpaired image translation and segmentation for colorectal
-                            cancer prevention (2022)</div>
-                    </div>
-                </section>
+                    <section>
+                        <h2>Domain adaptation</h2>
+                        <div class="fragment">
+                            <div>&#9744;Synthetic data for unsupervised polyp segmentation (2021)</div>
+                            <div>&#9744;Joint one-sided synthetic unpaired image translation and segmentation for
+                                colorectal
+                                cancer prevention (2022)</div>
+                        </div>
+                    </section>
 
-                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-                    <div class="r-hstack justify-center">
-                        <div data-id="box1"
-                            style="border:solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px; justify-content: center;">
-                            <div style="margin-top: 45%;">Synthetic
+                    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                        <div class="r-hstack justify-center">
+                            <div data-id="box1"
+                                style="border:solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px; justify-content: center;">
+                                <div style="margin-top: 45%;">Synthetic
+                                </div>
+                            </div>
+                            <div><span style="font-size: 50px;">&#10230;</span>
+                            </div>
+                            <div data-id="box2"
+                                style="border: solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px;">
+                                <div style="margin-top: 45%;">Real
+                                </div>
                             </div>
                         </div>
-                        <div><span style="font-size: 50px;">&#10230;</span>
-                        </div>
-                        <div data-id="box2"
-                            style="border: solid; width: 400px; height: 400px; margin: 10px; border-radius: 400px;">
-                            <div style="margin-top: 45%;">Real
+                    </section>
+
+                    <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                        <div class="r-hstack">
+                            <div data-id="box1"
+                                style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
+                            </div>
+                            <div data-id="box2"
+                                style="border: solid; width: 500px; height: 500px; border-radius: 400px; margin-left: -150px;">
                             </div>
                         </div>
-                    </div>
+                        <p style="margin-top: 20px;">Domain adaptation <strong>reduces the dissimilarity</strong>
+                            between
+                            domains</p>
+                    </section>
+
+                    <section>
+                        <h3>Polyp segmentation</h3>
+                        <img src="images/dummy.png" width="500" height="300">
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Synth-colon dataset</h2>
+                        <!-- (video backgorund) -->
+                    </section>
+
+                    <section data-auto-animate>
+                        <h2>Synth-colon dataset</h2>
+                        <ul>
+                            <li>20.000 synthetic images</li>
+                            <li>Self-annotated</li>
+                            <li>Depth maps</li>
+                            <li>3D objects</li>
+                        </ul>
+                    </section>
+
+                    <section>Diagram with Cyclegan (details about CGAN, will use zoom)(RQ2!)</section>
+                    <section>Diagram with CUT (will use zoom)</section>
+                    <section>Iframe CUT github + code loss (steps)</section>
+                    <section>Loss formula latex (previous slide?)</section>
+                    <section>Sample of adapted images</section>
+
                 </section>
 
-                <section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
-                    <div class="r-hstack">
-                        <div data-id="box1" style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
+                <section>Connection to RQ3, graph CUT performance (2 fragments)</section>
+
+                <!-- Pseudo-labels  -->
+                <section>
+                    <section>
+                        <h2>Pseudo-labels</h2>
+                        <div class="fragment">
+                            <div>&#9744;Self-Supervised and Semi-Supervised Polyp Segmentation using Synthetic Data
+                                (2023)
+                            </div>
+                            <div>&#9744;Fashion CUT: Unsupervised domain adaptation for visual pattern classification in
+                                clothes using synthetic data and pseudo-labels (2023)</div>
                         </div>
-                        <div data-id="box2"
-                            style="border: solid; width: 500px; height: 500px; border-radius: 400px; margin-left: -150px;">
-                        </div>
-                    </div>
-                    <p style="margin-top: 20px;">Domain adaptation <strong>reduces the dissimilarity</strong> between
-                        domains</p>
+                    </section>
+                    <section>Diagram with PL(should I mention the tricks?)</section>
+                    <section>Samples fashion</section>
+                    <section>Code for pseudo-labels in classification</section>
+                    <section>Adapted images fashion</section>
+
                 </section>
 
+                <!-- Conclusions  -->
                 <section>
-                    <h3>Polyp segmentation</h3>
-                    <img src="images/dummy.png" width="500" height="300">
+                    <section>
+                        <h2>Conclusions</h2>
+                    </section>
+                    <section>
+                        <h3>Real data provides better results than synthetic data</h3>
+                    </section>
+                    <section>
+                        <h3>Real data provides better results than synthetic data</h3>
+                        <h3>Except when less than ~100 real images are available</h3>
+                    </section>
+                    <section>
+                        <h3>Synthetic data doesn't need to be realistic</h3>
+                    </section>
+                    <section>
+                        <h3>Domain adaptation should be applied during training</h3>
+                    </section>
+                    <section>
+                        <h3>Pseudo-labels compliment synthetic data very well</h3>
+                    </section>
                 </section>
-
-                <section data-auto-animate>
-                    <h2>Synth-colon dataset</h2>
-                    <!-- (video backgorund) -->
-                </section>
-
-                <section data-auto-animate>
-                    <h2>Synth-colon dataset</h2>
-                    <ul>
-                        <li>20.000 synthetic images</li>
-                        <li>Self-annotated</li>
-                        <li>Depth maps</li>
-                        <li>3D objects</li>
-                    </ul>
-                </section>
-
-                <section>Diagram with Cyclegan (details about CGAN, will use zoom)(RQ2!)</section>
-                <section>Diagram with CUT (will use zoom)</section>
-                <section>Iframe CUT github + code loss (steps)</section>
-                <section>Loss formula latex (previous slide?)</section>
-                <section>Sample of adapted images</section>
-
-            </section>
-
-            <section>Connection to RQ3, graph CUT performance (2 fragments)</section>
-
-            <!-- Pseudo-labels  -->
-            <section>
-                <section>
-                    <h2>Pseudo-labels</h2>
-                    <div class="fragment">
-                        <div>&#9744;Self-Supervised and Semi-Supervised Polyp Segmentation using Synthetic Data (2023)
-                        </div>
-                        <div>&#9744;Fashion CUT: Unsupervised domain adaptation for visual pattern classification in
-                            clothes using synthetic data and pseudo-labels (2023)</div>
-                    </div>
-                </section>
-                <section>Diagram with PL(should I mention the tricks?)</section>
-                <section>Samples fashion</section>
-                <section>Code for pseudo-labels in classification</section>
-                <section>Adapted images fashion</section>
-
-            </section>
-
-            <!-- Conclusions  -->
-            <section>
-                <section>
-                    <h2>Conclusions</h2>
-                </section>
-                <section>
-                    <h3>Real data provides better results than synthetic data</h3>
-                </section>
-                <section>
-                    <h3>Real data provides better results than synthetic data</h3>
-                    <h3>Except when less than ~100 real images are available</h3>
-                </section>
-                <section>
-                    <h3>Synthetic data doesn't need to be realistic</h3>
-                </section>
-                <section>
-                    <h3>Domain adaptation should be applied during training</h3>
-                </section>
-                <section>
-                    <h3>Pseudo-labels compliment synthetic data very well</h3>
-                </section>
-            </section>
         </div>
     </div>
 
