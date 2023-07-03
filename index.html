@@ -343,29 +343,27 @@
                             European Conference on Computer Vision.</em></cite>
                 </section>
                 <section data-auto-animate>
-                    <h2>Adapting a synthetic dataset</h2>
+                    <img src="images/d2.png" height="250">
                     <pre><code class="python3" data-trim data-line-numbers="|4,5|11">
                         net_G = CutGenerator()
                         net_S = HarDMSEG()
 
-                        adapted_image = net_G(input_image)
+                        adapted_image = net_G(synthetic_image)
                         prediction = net_S(adapted_image)
                         
-                        loss_G = criterion_G(adapted_image, input_image)
-                        loss_D = criterion_D(adapted_image, input_image)
-                        loss_S = criterion_S(prediction, ground_truth)
+                        loss_G = criterion_G(adapted_image, synthetic_image)
+                        loss_D = criterion_D(adapted_image, synthetic_image)
+                        loss_S = criterion_S(prediction, synthetic_label)
 
                         loss_GAN =  0.1 * (loss_G + loss_D) + 0.9 * loss_S
                         loss_GAN.backward()
 
                           </code></pre>
-
+                    
                 </section>
                 <section>
-                    <h2>Adapting a synthetic dataset</h2>
-
                     <div class="r-hstack">
-                        <div style="line-height: 3em;">
+                        <div style="line-height: 3em; margin-right: 1em">
                             <div>Synthetic</div>
                             <div>CycleGAN</div>
                             <div>CUT</div>
