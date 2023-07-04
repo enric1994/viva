@@ -376,7 +376,16 @@
 
             </section>
 
-            <section>Connection to RQ3, graph CUT performance (2 fragments)</section>
+            <section>
+                <h3>Line chart with CSV data and JSON configuration</h3>
+                <div style="height:480px">
+                    <canvas data-chart="line">
+                        My first dataset, 65, 59, 80, 81, 56, 55, 40
+                        My second dataset, 28, 48, 40, 19, 86, 27, 90
+
+                    </canvas>
+                </div>
+            </section>
 
             <!-- Pseudo-labels  -->
             <section>
@@ -428,6 +437,8 @@
     <script src="plugin/highlight/highlight.js"></script>
     <script src="plugin/search/search.js"></script>
     <script src="plugin/zoom/zoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+    <script src="plugin/chart/plugin.js"></script>
     <script>
         // More info about initialization & config:
         // - https://revealjs.com/initialization/
@@ -439,7 +450,7 @@
             slideNumber: 'c',
 
             // Learn about plugins: https://revealjs.com/plugins/
-            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom]
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch, RevealZoom, RevealChart]
         });
     </script>
 </body>
