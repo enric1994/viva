@@ -375,7 +375,17 @@
                         <!--
                         {
                         "options": {
-                             "plugins": { "legend": { "display": false } },
+                             "plugins": { 
+                                "legend": { "display": false },
+                                "title": {
+                                    "display": true,
+                                    "text": "Polyp segmentation performance on Kvasir dataset",
+                                    "font": {
+                                        "size": 30,
+                                        "weight": "normal"
+                                    }
+                                }
+                             },
                              "animation": {"duration": 6000},
                              "scales": {
                                 "x": {
@@ -433,15 +443,16 @@
                     <img src="images/pl2.png" height="350">
                 </section>
                 <section data-auto-animate>
-                    <img src="images/pl2.png" height="250">
-                    <pre><code class="python3" data-noescape data-ln-start-from="3" data-line-numbers="|4,5|11">
+                    <img src="images/pl2.png" height="300">
+                    <pre><code class="python3" data-trim>
+                        <script type="text/template">
                     with torch.no_grad():
                         pseudo_label = net_S(real_image)
+
                     concatenated_labels = torch.cat([pseudo_label, synthetic_label], dim=0)
                     concatenated_images = torch.cat([real_image, adapted_image], dim=0)
                     
-                    prediction = net_S(concatenated_images)
-
+                </script>
                     </code></pre>
                 </section>
 
@@ -452,7 +463,17 @@
                             <!--
                             {
                             "options": {
-                                 "plugins": { "legend": { "display": false } },
+                                 "plugins": { 
+                                    "legend": { "display": false },
+                                    "title": {
+                                    "display": true,
+                                    "text": "Polyp segmentation performance on Kvasir dataset",
+                                    "font": {
+                                        "size": 30,
+                                        "weight": "normal"
+                                    }
+                                }
+                                 },
                                  "animation": {"duration": 6000},
                                  "scales": {
                                     "x": {
@@ -514,7 +535,7 @@
                     <h3>Domain adaptation should be applied during training</h3>
                 </section>
                 <section>
-                    <h3>Pseudo-labels compliment synthetic data very well</h3>
+                    <h3>Pseudo-labels compliment synthetic data remarkably</h3>
                 </section>
             </section>
         </div>
