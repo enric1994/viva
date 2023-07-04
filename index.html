@@ -132,8 +132,8 @@
                                 src="https://embed.github.com/view/3d/enric1994/viva/master/models/lowpoly.stl"></script>
                             102 faces
                         </div>
-
                     </div>
+                    <cite>Source: <a href="https://github.com/HappyFunCorp/model_army" target="_blank">GitHub</a></cite>
                 </section>
 
                 <section data-auto-animate>
@@ -386,10 +386,25 @@
                              "plugins": { "legend": { "display": false } },
                              "animation": {"duration": 6000},
                              "scales": {
+                                "x": {
+                                    "ticks": {
+                                        "font": {
+                                            "size": 30
+                                        }
+                                    }
+                                },
                                 "y": {
+                                    "ticks": {
+                                        "font": {
+                                            "size": 20
+                                        }
+                                    },
                                     "title": {
                                         "display": true,
-                                        "text": "IoU"
+                                        "text": "Intersection over Union (IoU)",
+                                        "font": {
+                                            "size": 30
+                                        }
                                     }
                                 }
                              } 
@@ -399,7 +414,7 @@
                           "datasets":[
                            {
                             "data":[0.31,0.52,0.62,0.85],
-                            "label":"IoU","backgroundColor":"rgba(20,20,20,.8)"
+                            "label":"IoU","backgroundColor":"black"
                            }
                           ]
                          }
