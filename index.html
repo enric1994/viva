@@ -145,7 +145,8 @@
                     </div>
                 </section>
 
-                <section data-auto-animate data-auto-animate-duration="2.5" data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+                <section data-auto-animate data-auto-animate-duration="2.5"
+                    data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <div class="r-stack">
                         <div data-id="box1" style="border: solid; width: 500px; height: 500px; border-radius: 400px;">
                             <div style="margin-top: 10%;">Synthetic
@@ -433,10 +434,15 @@
                 </section>
                 <section data-auto-animate>
                     <img src="images/pl2.png" height="250">
-                    <pre><code class="python3" data-trim data-line-numbers="|4,5|11">
-                        # Code for pseudo-labels
+                    <pre><code class="python3" data-noescape data-ln-start-from="3" data-line-numbers="|4,5|11">
+                    with torch.no_grad():
+                        pseudo_label = net_S(real_image)
+                    concatenated_labels = torch.cat([pseudo_label, synthetic_label], dim=0)
+                    concatenated_images = torch.cat([real_image, adapted_image], dim=0)
+                    
+                    prediction = net_S(concatenated_images)
 
-                          </code></pre>
+                    </code></pre>
                 </section>
 
                 <section data-auto-animate>
