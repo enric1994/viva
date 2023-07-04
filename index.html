@@ -376,14 +376,36 @@
 
             </section>
 
-            <section>
-                <h3>Line chart with CSV data and JSON configuration</h3>
+            <section data-auto-animate>
+                <h3>Synthetic data is not enough</h3>
                 <div style="height:480px">
-                    <canvas data-chart="line">
-                        My first dataset, 65, 59, 80, 81, 56, 55, 40
-                        My second dataset, 28, 48, 40, 19, 86, 27, 90
-
-                    </canvas>
+                    <canvas data-chart="bar" >
+                        <!--
+                        {
+                        "options": {
+                             "plugins": { "legend": { "display": false } },
+                             "animation": {"duration": 6000},
+                             "scales": {
+                                "y": {
+                                    "title": {
+                                        "display": true,
+                                        "text": "IoU"
+                                    }
+                                }
+                             } 
+                            },
+                         "data": {
+                          "labels": ["Raw synthetic", "CycleGAN", "CUT-Seg","Real data"],
+                          "datasets":[
+                           {
+                            "data":[0.31,0.52,0.62,0.85],
+                            "label":"IoU","backgroundColor":"rgba(20,20,20,.8)"
+                           }
+                          ]
+                         }
+                        }
+                        -->
+                        </canvas>
                 </div>
             </section>
 
