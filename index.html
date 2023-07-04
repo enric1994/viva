@@ -427,11 +427,66 @@
                             clothes using synthetic data and pseudo-labels (2023)</small>
                     </div>
                 </section>
-                <section>Diagram with PL(should I mention the tricks?)</section>
-                <section>Samples fashion</section>
-                <section>Code for pseudo-labels in classification</section>
-                <section>Adapted images fashion</section>
+                <section data-auto-animate>
+                    <h2>Exposing the model to real-world images</h2>
+                    <img src="images/pl2.png" height="350">
+                </section>
+                <section data-auto-animate>
+                    <img src="images/pl2.png" height="250">
+                    <pre><code class="python3" data-trim data-line-numbers="|4,5|11">
+                        # Code for pseudo-labels
 
+                          </code></pre>
+                </section>
+
+                <section data-auto-animate>
+                    <h3>Closing the gap with pseudo-labels</h3>
+                    <div style="height:480px">
+                        <canvas data-chart="bar">
+                            <!--
+                            {
+                            "options": {
+                                 "plugins": { "legend": { "display": false } },
+                                 "animation": {"duration": 6000},
+                                 "scales": {
+                                    "x": {
+                                        "ticks": {
+                                            "font": {
+                                                "size": 20
+                                            }
+                                        }
+                                    },
+                                    "y": {
+                                        "ticks": {
+                                            "font": {
+                                                "size": 20
+                                            }
+                                        },
+                                        "title": {
+                                            "display": true,
+                                            "text": "Intersection over Union (IoU)",
+                                            "font": {
+                                                "size": 30
+                                            }
+                                        }
+                                    }
+                                 } 
+                                },
+                             "data": {
+                              "labels": ["Raw synthetic", "CycleGAN", "CUT-Seg", "PL-CUT-Seg", "Real data"],
+                              "datasets":[
+                               {
+                                "data":[0.31,0.52,0.62,0.68,0.85],
+                                "backgroundColor": ["black", "black", "black", "#7f7f7f", "black"], 
+                                "label":"IoU"
+                               }
+                              ]
+                             }
+                            }
+                            -->
+                        </canvas>
+                    </div>
+                </section>
             </section>
 
             <!-- Conclusions  -->
